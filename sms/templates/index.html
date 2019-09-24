@@ -19,6 +19,11 @@
         <div class="content">
             <div class="principal">
                  <h1>Bulk SMS </h1>
+                 {% if user.is_authenticated %}
+                 <p>Your name is {{ user.username }} </p>
+                 {% else %}
+                 <p>You are not logged in !</p>
+                 {% endif %}
                  <p>Big things coming soon !</p>
             </div>
         </div>

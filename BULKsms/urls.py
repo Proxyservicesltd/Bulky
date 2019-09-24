@@ -18,8 +18,13 @@ from django.urls import path,include,re_path
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path(r'^admin/', admin.site.urls),
+    path(r'admin/', admin.site.urls),
+    path('', include('sms.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
+    # path(r'login/', auth_views.LoginView.as_view(), name='login'),
+    # path(r'logout/', auth_views.LogoutView.as_view, name='logout'),
     re_path(r'^', include('sms.urls'))
 ]

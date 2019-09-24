@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'bulkdb',
-        'USER': 'collins',
-        'PASSWORD':'wildgoosechase',
+        'USER': 'dnyt',
+        'PASSWORD':'dimm8450',
     }
 }
 

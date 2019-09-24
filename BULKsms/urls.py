@@ -20,6 +20,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path(r'^admin/', admin.site.urls),
-    re_path(r'^', include('sms.urls'))
+    path('admin/', admin.site.urls),
+    path('', include('sms.urls'))
 ]

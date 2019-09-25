@@ -4,7 +4,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 
 class BulkNumbers(models.Model):
     name = models.CharField(max_length=50)
-    phone_number = PhoneNumberField()
+    phone_number = PhoneNumberField(null=False, blank=False, unique=True)
 
     def __str__(self):
         return self.name
